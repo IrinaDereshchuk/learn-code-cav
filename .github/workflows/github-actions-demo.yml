@@ -1,9 +1,12 @@
 name: GitHub Actions Demo
-on: [push]
+on: [push, pull_request]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Codecov
-        uses: codecov/codecov-action@v3.1.0
-
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Run tests and collect coverage
+          command: npm run test
