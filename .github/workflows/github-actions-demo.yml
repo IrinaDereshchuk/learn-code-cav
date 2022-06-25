@@ -15,7 +15,7 @@ jobs:
       - name: Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
-          files: ../../coverage/app/cobertura-coverage.xml
+          files: ./coverage/app/cobertura-coverage.xml
           flags: unittests
           name: codecov-umbrella
           verbose: true
