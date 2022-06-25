@@ -12,3 +12,10 @@ jobs:
         run: npm i
       - name: Run tests and collect coverage
         run: npm test
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.0
+        with:
+          files: ../../coverage/app/cobertura-coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+          verbose: true
